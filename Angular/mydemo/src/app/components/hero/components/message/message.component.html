@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: space-around;">
+  <span style="font-size: 20px;">操作记录</span>
+  <button type="button" class="clear" (click)="messageService.clear()">Clear messages</button>
+</div>
+<div *ngIf="messageService.messages.length; else elseMessage" class="messageList">
+  <div *ngFor='let message of messageService.messages' class="messageitem"> {{message}} </div>
+</div>
+
+<ng-template #elseMessage>
+  <div style="display: flex;  justify-content: center; color:red; ">
+    暂时还没有记录
+  </div>
+</ng-template>

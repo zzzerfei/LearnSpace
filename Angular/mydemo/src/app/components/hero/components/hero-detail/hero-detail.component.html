@@ -1,0 +1,13 @@
+<!-- *ngIf 用于判断是否展示 -->
+<div *ngIf="hero">
+  <!-- 文本插值 管道 -->
+  <h2>{{hero.name | uppercase}} 信息</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <!-- 双向绑定 -->
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+  <button type="button" (click)="goBack()">返回</button>
+  <button type="button" (click)="save()">保存</button>
+</div>

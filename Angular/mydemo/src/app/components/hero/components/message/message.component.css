@@ -1,0 +1,8 @@
+.messageList {
+  margin: 0 auto;
+  text-align: center;
+}
+.messageitem {
+  margin-top: 3px;
+  color: blue;
+}

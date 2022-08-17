@@ -1,0 +1,34 @@
+<h1>Hello World！</h1>
+<h2>第一次尝试 Angular</h2>
+<h2>第一次尝试渲染数据 {{currentCustomer}}</h2>
+<h2>表达式 {{1+1+1}} 还可以调用方法{{1+1+getVal()}}</h2>
+<hr>
+<mycom01></mycom01>
+<yh-myc02></yh-myc02>
+
+
+<!-- 父传子 -->
+<h2>父传子测试</h2>
+<h3>Agree: {{agreed}}, Disagree:{{disagreed}}</h3>
+<yh-myc03 *ngFor="let voter of voters" [name]="voter" (voted)="onVoted($event)"></yh-myc03>
+
+
+
+<button (click)="getbox()">弹出提示框</button>
+
+<p [title]="title">现在学习属性绑定</p>
+
+<!-- 数据绑定 -->
+<h1>尝试数据绑定</h1>
+<p>{{num}}</p>
+<button (click)="add()">+</button>
+<button (click)="jian()">-</button>
+
+
+
+
+<app-instruction></app-instruction>
+
+<app-dependinjection></app-dependinjection>
+
+<app-httpclient></app-httpclient>

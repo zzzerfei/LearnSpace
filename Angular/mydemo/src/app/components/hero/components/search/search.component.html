@@ -1,0 +1,13 @@
+<div id="search-component">
+  <!-- <label for="search-box"></label> -->
+  <input #searchBox placeholder="输入名称进行搜索" id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <!-- ngFor 不能直接用 Observable 管道 async 用于订阅 Observable -->
+    <li *ngFor="let hero of heroes$ | async" >
+      <a routerLink="/hero/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>

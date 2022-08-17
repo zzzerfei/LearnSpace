@@ -1,0 +1,25 @@
+<h2>已完成事件</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}" routerLinkActive="router-link-active">
+          <span class="badge">{{hero.id}}</span>
+          <span class="name">{{hero.name}}</span>
+      </a>
+<!--       <button
+          type="button"
+          class="complete"
+          title="delete hero"
+          (click)="complete(hero)"
+      >
+          √
+      </button>
+      <button
+          type="button"
+          class="delete"
+          title="delete hero"
+          (click)="delete(hero)"
+      >
+          x
+      </button> -->
+  </li>
+</ul>
